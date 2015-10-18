@@ -8,7 +8,7 @@ RequestExecutionLevel admin
 ;in KB!
 !define INSTALLSIZE 20000
 
-OutFile "./${INSTALLNAME}_Setup.exe"
+OutFile "./${INSTALLNAME}_${VERSION}_Setup.exe"
 InstallDir $PROGRAMFILES\${INSTALLNAME}
 
 !insertmacro MUI_PAGE_DIRECTORY
@@ -28,6 +28,13 @@ Section ""
 	File /r Files\*
 	WriteUninstaller $INSTDIR\uninstall.exe
 	CreateDirectory "$LOCALAPPDATA\Fusion\"
+		
+	SetOutPath "$LOCALAPPDATA\Fusion\"
+	File /r Files\dbUpdate
+	
+	
+	SetOutPath $INSTDIR	
+	
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${INSTALLNAME}" "DisplayName" "${INSTALLNAME}"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${INSTALLNAME}" "UninstallString" '"$INSTDIR\uninstall.exe"'
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${INSTALLNAME}" "Publisher" "${COMPANY}"
