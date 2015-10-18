@@ -26,7 +26,8 @@ At this moment it has to look like this:
             qsqlite.dll
 ```
 
-You can find the qt.conf-File also here in this Repo.
+The basic Files and Folder-Structure is already added.
+You can find the qt-DLLs in your QT-Folder, hit search in C:\QT or wherever you have installed it.
 Please note that you have to create a release-build.
 
 ## Doxyfile
