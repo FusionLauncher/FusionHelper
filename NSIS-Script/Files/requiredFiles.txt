@@ -1,0 +1,10 @@
+¦   FusionCLI.exe
+¦   FusionUpdater.exe
+¦   libgcc_s_dw2-1.dll
+¦   libstdc++-6.dll
+¦   libwinpthread-1.dll
+¦   Qt5Core.dll
+¦   Qt5Gui.dll
+¦   Qt5Network.dll
+¦   Qt5Sql.dll
+¦   Qt5Widgets.dll
