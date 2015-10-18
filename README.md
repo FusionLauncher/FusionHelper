@@ -1,5 +1,5 @@
 # FusionHelper
-This Repo will contain some Script and Tools.
+This repo contains some scripts and tools used by Fusion.
 
 ## NSIS Installer-Script
 In the same Folder as the Script, create a directory called "Files", which contains all the required Files.
