@@ -71,7 +71,7 @@ Section "un.Program-Files"
 SectionEnd
 
 
-Section "un.Delete User-Data"
+Section "un.User-Data"
   ;APP-DATA
   Delete "$LOCALAPPDATA\Fusion\*"
   RMDir /r "$LOCALAPPDATA\Fusion"
