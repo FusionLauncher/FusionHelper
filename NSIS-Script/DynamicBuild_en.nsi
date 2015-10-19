@@ -17,6 +17,7 @@ InstallDir $PROGRAMFILES\${INSTALLNAME}
 
 
 !insertmacro MUI_UNPAGE_CONFIRM
+!insertmacro MUI_UNPAGE_COMPONENTS
 !insertmacro MUI_UNPAGE_INSTFILES
 
 
@@ -56,7 +57,7 @@ Section "Start Menu Shortcuts"
   CreateShortCut "$SMPROGRAMS\${INSTALLNAME}\FusionUpdater.lnk" "$INSTDIR\FusionUpdater.exe" "" "$INSTDIR\FusionUpdater.exe" 0
 SectionEnd
 
-Section "Uninstall"
+Section "un.Program-Files"
   SetShellVarContext current
   DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${INSTALLNAME}"
   Delete $INSTDIR\*
@@ -67,9 +68,14 @@ Section "Uninstall"
   Delete "$SMPROGRAMS\${INSTALLNAME}\*"
   RMDir "$SMPROGRAMS\${INSTALLNAME}"
   
+SectionEnd
+
+
+Section "un.Delete User-Data"
   ;APP-DATA
   Delete "$LOCALAPPDATA\Fusion\*"
   RMDir /r "$LOCALAPPDATA\Fusion"
   
 SectionEnd
+
 
