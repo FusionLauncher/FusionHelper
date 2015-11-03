@@ -1,14 +1,15 @@
 !include "MUI.nsh"
+
  
 Name "FusionLauncher"
 RequestExecutionLevel admin
 !define INSTALLNAME "FusionLauncher"
 !define COMPANY "Project Fusion"
-!define VERSION 0.9.1
+!define VERSION 0.9
 ;in KB!
 !define INSTALLSIZE 20000
 
-OutFile "./${INSTALLNAME}_${VERSION}_Setup.exe"
+OutFile "./FusionLauncher_Win_Nightly.exe"
 InstallDir $PROGRAMFILES\${INSTALLNAME}
 
 !insertmacro MUI_PAGE_DIRECTORY
