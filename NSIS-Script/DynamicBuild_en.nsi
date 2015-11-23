@@ -1,11 +1,11 @@
 !include "MUI.nsh"
-
+!include "version.nsh"
  
 Name "FusionLauncher"
 RequestExecutionLevel admin
 !define INSTALLNAME "FusionLauncher"
 !define COMPANY "Project Fusion"
-!define VERSION 0.9
+
 ;in KB!
 !define INSTALLSIZE 20000
 
